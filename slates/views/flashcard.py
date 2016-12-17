@@ -83,11 +83,20 @@ class FlashCardDetail(APIView):
         flashcard = FlashCardSerializer(flashcard)
         return Response(flashcard.data)
 
+    def get_all_data(self, rdata, flashcard):
+        data = {k:v for k, v in rdata.items()}
+        if not rdata.get('side_a'):
+            data['side_a'] = flashcard.side_a
+        if not data.get('side_b'):
+            data['side_b'] = flashcard.side_b
+        return data
+
     def put(self, request, pk, format=None):
         if not request.user:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         flashcard = self.get_object(pk)
-        serializer = FlashCardSerializer(flashcard, data=request.data)
+        data = self.get_all_data(request.data, flashcard)
+        serializer = FlashCardSerializer(flashcard, data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
