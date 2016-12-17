@@ -1,0 +1,49 @@
+<div class="add-mcq-form hide">
+  <script type="text/javascript">getMcqSets()</script>
+  <div class="pad5">
+     <span>Set Name: </span>
+     <div id="newset">
+       <select id='mcqset' class="pad5"></select>
+       <span class="point pad5" onclick="$('#newset').empty();$('#set-name').show()"
+       style="text-decoration:underline">New Set</span>
+     </div>  
+     <textarea id="set-name" class="input-box hide"></textarea>
+  </div>  
+  <div class="pad5">
+     <span>Question: </span>
+     <textarea id="question" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+     <span>Option1: </span>
+     <textarea id="option1" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+     <span>Option2: </span>
+     <textarea id="option2" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+     <span>Option3: </span>
+     <textarea id="option3" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+     <span>Option4: </span>
+     <textarea id="option4" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+    <span>Answer: </span><select id="answer">
+      <option value="option1">Option1</option>
+      <option value="option2">Option2</option>
+      <option value="option3">Option3</option>
+      <option value="option4">Option4</option>
+     </select>
+   </div>
+  <div class="pad5">
+     <span>Correct Answer Text: <span style="font-size:11px">(Not mandatory)</span></span>
+     <textarea id="correct-text" class="input-box"></textarea>
+  </div>
+  <div class="pad5">
+     <span>Wrong Answer Text: <span style="font-size:11px">(Not mandatory)</span></span>
+     <textarea id="wrong-text" class="input-box"></textarea>
+  </div>
+ <input type="button" value="save" class="sbutton gap10 right" onclick="addMcq()">
+</div>

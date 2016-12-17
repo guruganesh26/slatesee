@@ -1,0 +1,294 @@
+
+.main-container {
+    position: absolute;
+    top: 75px;
+    bottom: 75px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(230, 230, 230, 0.9);
+    border-radius: 10px;
+}
+
+.notification-container{
+    height: 100%;
+    width: 20%;
+    float: left;
+    /*font-weight: bold;*/
+    background-color: rgba(101, 112, 119, 0.76);
+    border-radius: 5px;
+    /*color: whitesmoke;*/
+    text-transform: capitalize;
+    font-size: 14px;
+    overflow-y: auto; 
+}
+
+.header-section {
+    width: 100%;
+    background-color: rgba(101, 112, 119, 0.76);
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.header-content {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.header-content-inner {
+    width: 100%;
+    float: left;
+    /*padding: 0 1em;*/
+}
+.site-logo {
+    float: left;
+    padding: 0.3em 0;
+}
+.site-logo img {
+    width: 8em;
+}
+
+#cssmenu{
+  margin-right: 10px;
+}
+
+#cssmenu ul > li{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+#cssmenu > ul > li > a {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 21px 0;
+  margin-left: 20px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+
+#cssmenu > ul > li:hover > a {
+    color: #333;
+}
+
+#cssmenu > ul > li.active > a {
+    color: #333;
+}
+
+.message-box{
+    margin: 25px 0px 25px 25px;
+    width: 255px;
+    height: 160px;
+    float: left;
+    background-color: rgba(101, 112, 119, 0.76);
+    border-radius: 5px;
+}
+
+.mcq-box{
+    margin: 25px 0px 25px 25px;
+    width: 255px;
+    height: 160px;
+    float: left;
+    background-color: rgba(101, 112, 119, 0.76);
+    border-radius: 5px;
+}
+
+.mcq-view-box{
+    margin: 0px 0px 20px 20px;
+    float: left;
+    background-color: rgba(101, 112, 119, 0.76);
+    border-radius: 5px;
+}
+
+.flashcard-box{
+    margin: 25px 0px 25px 25px;
+    width: 255px;
+    height: 160px;
+    float: left;
+    background-color: rgba(101, 112, 119, 0.76);
+    border-radius: 5px;
+}
+
+#message-area{
+    width: 100%;
+    height: 100px;
+    margin: 10px 0px 10px 0px;
+}
+
+.send-message-box{
+   margin: 0px 0px 25px 3%;
+   width: 47%;
+   height: 100%;
+   float: left;
+   background-color: rgba(101, 112, 119, 0.76);
+   border-radius: 5px;
+   overflow-y: auto;
+
+}
+
+.message{
+    margin: 20px;
+    color: darkslategray;
+    /* position: absolute; */
+    background: rgba(230, 230, 230, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    float: right;
+    height: 100px;
+    min-width: 195px;
+    max-width: 195px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.flashcard{
+    margin: 20px;
+    color: darkslategray;
+    background: rgba(230, 230, 230, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    /*float: right;*/
+    height: 100px;
+    min-width: 195px;
+    max-width: 195px;
+    word-wrap: break-word;
+}
+
+.mcq{
+    margin: 20px;
+    color: darkslategray;
+    background: rgba(230, 230, 230, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    float: right;
+    height: 100px;
+    min-width: 195px;
+    max-width: 195px;
+    word-wrap: break-word;
+}
+
+.mcq-view{
+    color: darkslategray;
+    background: rgba(230, 230, 230, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    float: right;
+    word-wrap: break-word;
+    text-align: center;
+    /*height: 360px;
+    min-width: 360px;
+    max-width: 360px;*/
+    margin: 20px;
+}
+
+.approve{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    position: absolute;
+}
+
+.message:hover input{
+  display: block;
+}
+
+.flashcard:hover input{
+  display: block;
+}
+
+.mcq:hover .approve{
+  display: block;
+}
+
+
+.message-container, .send-message-container, 
+.flashcard-container, .mcq-container, .mcq-view-container{
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+.message-container, .flashcard-container, 
+.mcq-container, .mcq-view-container{
+  overflow-y: auto;
+}
+
+.event-container{
+  width: 60%;
+  float: left;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.slide-container{
+  /*padding: 5px;*/
+  background-color: rgba(101, 112, 119, 0.76);
+  border-radius: 5px;
+  float: left;
+  width: 40%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.profile img{
+  height: 150px;
+  width: 100%;
+  border-radius:10px 
+}
+
+.event-details{
+    background-color: rgba(230, 230, 230, 0.9);
+    margin: 0px 20px 10px 20px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.event-details > div{
+  padding: 5px;
+}
+
+.student-details, .user-details{
+  margin: 5px 0px 5px 0px;
+  height: 100px;
+  background-color: rgba(230, 230, 230, 0.9);
+  border-radius: 5px;
+}
+
+.student-profile img, .user-profile img{
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 15px;
+  float: right;
+}
+
+.add-student-form, .add-user-form, .add-marks-form,
+.add-flash-form, .add-mcq-form{
+  margin-left: 20px;
+  padding: 0px 10px 10px 0px;
+}
+
+.add-student-form .input-box, .add-user-form .input-box, .add-marks-form .input-box{
+  height: 15px;
+}
+
+ol.questions li, ul.answers li{
+  text-align: left;
+}
+
+ol.questions li {
+    margin-left: 20px !important;
+    cursor: pointer;
+}

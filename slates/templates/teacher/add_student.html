@@ -1,0 +1,46 @@
+<div class="add-student-form">
+  <div class="pad5">
+     <span>Student Name: </span>
+     <input type="text" id="stud-name" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Standard: </span>
+  <select id='std'>
+    <option value='i'>I</option>
+		<option value='ii'>II</option>
+		<option value='iii'>III</option>
+		<option value='iv'>IV</option>
+		<option value='v'>V</option>
+		<option value='vi'>VI</option>
+		<option value='vii'>VII</option>
+		<option value='viii'>VIII</option>     	
+  </select>
+  </div>
+  <div class="pad5">
+     <span>Email Id: </span>
+     <input type="text" id="user-name" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Reg No: </span>
+     <input type="number" id="reg-no" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Parent Name: </span>
+     <input type="text" id="parent-name" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Mobile No: </span>
+     <input type="number" id="mobile-no" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Date of Birth: </span>
+     <input type="date" id="dob" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Profile Image: </span>
+     <input type="file" id="profile-image" class="input-box" onchange="uploadedFile(event)"/>
+  </div>
+  <div class="uploaded-filename hide">
+  </div>
+  <input type="button" value="save" class="sbutton gap10 right" onclick="addStudent()">
+</div>

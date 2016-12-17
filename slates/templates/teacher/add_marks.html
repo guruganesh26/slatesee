@@ -1,0 +1,33 @@
+<script type="text/javascript">getStudentListForMark();</script>
+<div class="add-marks-form">
+  <span>Student name: </span><select id="student-mark-list">
+  </select>
+  <span>Exam name: </span><select id="mark-type">
+    <option value="mid-term1">Mid-Term1</option>
+    <option value="quarterly">Quarterly</option>
+    <option value="mid-term2">Mid-Term2</option>    
+    <option value="halferly">Halferly</option>
+    <option value="halferly">Annually</option>
+   </select>
+  <div class="pad5">
+     <span>Tamil: </span>
+     <input type="number" id="s1" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>English: </span>
+     <input type="number" id="s2" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Maths: </span>
+     <input type="number" id="s3" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Science: </span>
+     <input type="number" id="s4" class="input-box"/>
+  </div>
+  <div class="pad5">
+     <span>Social: </span>
+     <input type="number" id="s5" class="input-box"/>
+  </div>
+  <input type="button" value="save" class="sbutton gap10 right" onclick="addMarks({{request.user.id}})">
+</div>

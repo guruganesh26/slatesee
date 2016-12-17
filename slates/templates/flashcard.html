@@ -1,0 +1,23 @@
+{% extends "home.html" %}
+
+{% block head%}
+<script type="text/javascript" src="static/js/flashcard.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/flip.css">
+{% endblock %}
+
+
+{% block  main %}
+	<div class="notification-container"></div>
+	{%if request.user.user_type == "teacher" or request.user.user_type == "principal" %}
+		<select id="appr-type" class="right" onchange="_PAGE=1;getFlashCards(this.value);">
+		    <option value="0">Not Approved</option>
+		    <option value="1">Approved</option>
+		</select>
+		<script type="text/javascript">getFlashCards($('#appr-type').val())</script>
+	{%else%}
+	   <script type="text/javascript">getFlashCards(1)</script>
+	{%endif%}
+	<div class="flashcard-container">
+	     <div class="clear"></div>
+	</div>
+{% endblock %}

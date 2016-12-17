@@ -1,0 +1,17 @@
+runtime: python27
+runtime_config:
+    python_version: 27
+api_version: 1
+threadsafe: yes
+handlers:
+- url: /static
+  static_dir: slates/static/
+- url: /.*
+  script: slatese.wsgi.application
+libraries:
+- name: jinja2
+  version: "latest"
+- name: lxml
+  version: "latest"
+- name: MySQLdb
+  version: "latest"

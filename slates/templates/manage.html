@@ -1,0 +1,44 @@
+{% extends "home.html" %}
+
+{% block head%}
+   <script type="text/javascript" src="static/js/manage.js"></script>
+   <script type="text/javascript" src="static/js/uploadfile.js"></script>
+{% endblock %}
+
+{% block  main %}
+ <div class="notification-container">
+   <marquee direction="up" behavior="scroll" hspace="10%" scrollamount="2" vspace="20%">
+     <div class="pad10">Our school strenght is 120</div>
+     <div class="pad10">Next month our sports day</div>
+     <div class="pad10">Students are advised to take drawing books tomorrow</div>
+   </marquee>
+ </div>
+ <div class="send-message-container">
+    <div class="send-message-box">
+      {% if request.user.user_type == "teacher" %}
+       <div class="point gap10">Add Students</div>
+       {% include "teacher/add_student.html" %}
+     {%endif%}
+     {% if request.user.user_type == "principal" %}
+       <div class="point gap10">Add Teacher</div>
+       {% include "teacher/add_teacher.html" %}
+     {%endif%}
+     {% if request.user.user_type == "admin" %}
+       <div class="point gap10">Add Schools</div>
+     {%endif%}
+    </div>
+   <div class="send-message-box">
+     {% if request.user.user_type == "principal" %}
+       <script type="text/javascript">getUserList('teacher');</script>
+       <div class="point gap10">Teacher List</div>
+       <div id="userList" class="gap10"></div>
+     {%endif%}
+     {% if request.user.user_type == "teacher" %}
+        <script type="text/javascript">getStudentList();</script>
+        <div class="point gap10">Student List</div>
+        <div id="studentList" class="gap10"></div>
+     {%endif%}
+    </div>
+    <div class="clear"></div>
+ </div>
+{% endblock %}

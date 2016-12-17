@@ -1,0 +1,18 @@
+{% extends "home.html" %}
+
+{% block head%}
+   <script type="text/javascript" src="static/js/lib/Chart.min.js"></script>
+{% endblock %}
+
+{% block  main %}
+   <select id="exam-type" class="right" onchange="getMarks({{request.user.id}})">
+   	<option value="mid-term1">Mid-Term1</option>
+   	<option value="quarterly">Quarterly</option>
+   	<option value="mid-term2">Mid-Term2</option>   	
+   	<option value="halferly">Halferly</option>
+   	<option value="annually">Annually</option>
+   </select>
+   <canvas id="myChart" height="120%"></canvas>
+   <script type="text/javascript" src="static/js/marks.js"></script>
+   <script>getMarks({{request.user.id}})</script>
+{% endblock %} 

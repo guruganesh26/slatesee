@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MySchool</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="static/js/lib/jquery.min.js"></script> -->
+  <script type="text/javascript" src="static/js/lib/jquery.blockUI.js"></script>
+  <script type="text/javascript" src="static/js/lib/alert.js"></script>
+  <script type="text/javascript" src="static/js/base.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/lib/alert.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+
+  {% block head%}
+       <script type="text/javascript" src="static/js/home.js"></script>
+       {%if request.user.user_type == "student" or request.user.user_type == "principal" %}
+          <script type="text/javascript" src="static/js/message.js"></script>
+       {%endif%}
+       {%if request.user.user_type == "teacher"%}
+          <script type="text/javascript" src="static/js/teacher.js"></script>
+          <script type="text/javascript" src="static/js/uploadfile.js"></script>
+       {%endif%}   
+  {% endblock %}  
+</head>
+<body class="bkgrnd">
+  {% include "nav-bar.html" %}
+  <div class="main-container">
+    {% block  main %}
+        <div class="notification-container">
+          <div class="profile pad20">
+            {% if request.user.profile_image %}
+              <image src="{{request.user.profile_image}}"></image>
+            {%else%}
+              <image src="/static/images/index1.png"></image>
+            {%endif%} 
+            <div class="gap-top20 pad5">Name: {{request.user.first_name}} {{request.user.last_name}}</div>
+            <div class="pad5">Dob: {{request.user.dob}}</div>
+            {%if request.user.standard %}
+              <div class="pad5">Std: {{request.user.standard}}</div>
+            {% endif %}  
+          </div>
+        </div>
+      {%if request.user.user_type == "student" or request.user.user_type == "principal" %}
+          {% include "messages.html" %}
+          <script type="text/javascript">getMessages();</script>
+      {%endif%}
+      {%if request.user.user_type == "teacher"%}
+          {% include "teacher/send_messages.html" %}      
+      {%endif%}
+    {% endblock %}      
+	<div class="clear"></div>
+  </div>
+</body>  
+</html>

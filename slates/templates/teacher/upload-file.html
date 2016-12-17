@@ -1,0 +1,12 @@
+<div class="upload-events">
+  <div class="point pad-top10" onclick="$('.uploaded-filename').toggleClass('hide');$('#upload_file').toggleClass('hide');">Upload Event Images</div>
+  <div class="uploaded-filename hide">
+      <div class="pad5">
+         <span>Event detail: <textarea id="event-details" class="display-block" style="width:100%"></textarea></span>
+      </div>
+      <div class="pad5">
+         <span>Date: <input type="date" id="event-date"></span> 
+      </div>
+      <input type="file" onchange="uploadedFile(event)" id="upload_file" class="sbutton gap-top10 hide right" style="width:100%">
+      <input type="button" value="save" class="sbutton gap-top10 right" onclick="saveUploadedFiles({{request.user.id}})">
+  </div>

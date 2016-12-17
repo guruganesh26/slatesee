@@ -1,0 +1,34 @@
+<div class="send-message-container">
+   <div class="send-message-box">
+      <div class="gap20">
+        <div class="send-message"> 
+       	  <span class="point" onclick="$('.message-text').toggleClass('hide')">Send Message</span>
+       	  <div class="message-text">
+            <select id="message-type" class="right gap-bottom10">
+              <option value="message">Message</option>
+              <option value="event">Event</option>
+              <option value="news">News</option>
+            </select>
+       	    <textarea id="message-area" class="display-block"></textarea>
+            <input type="button" value="send" class="sbutton gap-top10" onclick="sendMessage({{request.user.id}})">  
+       	  </div>
+        </div>
+        {% include "teacher/upload-file.html" %}
+        </div>
+      </div>
+   </div>
+   <div class="send-message-box">
+      <div class="point gap10">Choose Action: 
+      <select id="form-type" selected="marks" class="gap-bottom10" onchange="showAction(this.value)">
+          <option value="marks">Marks</option>
+          <option value="flash">Flashcard</option>
+          <option value="mcq">MCQ</option>
+      </select>
+      </div>
+      {% include "teacher/add_marks.html" %}
+      {% include "teacher/add_flashcard.html" %}
+      {% include "teacher/add_mcq.html" %}
+   </div>
+   <div class="clear"></div>
+</div>
+</div>

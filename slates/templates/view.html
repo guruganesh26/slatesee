@@ -1,0 +1,17 @@
+{% extends "home.html" %}
+
+{% block head%}
+    {%if request.user.user_type == "teacher"%}
+       <script type="text/javascript" src="static/js/message.js"></script>
+    {%endif%}
+   <script type="text/javascript" src="static/js/view.js"></script>
+{% endblock %}
+
+{% block  main %}
+   <div class="notification-container">
+   </div>
+   {%if request.user.user_type == "teacher"%}
+      {% include "messages.html" %}
+      <script type="text/javascript">getMessages(0);</script>
+   {%endif%}   
+{% endblock %} 

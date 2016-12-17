@@ -1,0 +1,131 @@
+.bkgrnd{
+    background: url('/static/images/bkgrnd.jpg') no-repeat fixed center center transparent;
+    margin: 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: auto;
+}
+
+html{
+  height: 100%;
+  width: 100%
+}
+
+.bkgrnd {
+  /* Set rules to fill background */
+  min-height: 100% !important;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .bkgrnd {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+.input-box{
+	padding: 5px;
+    display: block;
+    background-color: whitesmoke;
+    width: 200px;
+    border: none;
+    height: 25px;
+    border-radius: 3px;
+ }
+
+.sbutton{
+    background-color: rgba(88, 95, 97, 0.94);
+    width: 100px;
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+    color: black;
+    cursor: pointer;
+ } 
+
+.pad10{
+    padding: 10px;
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.pad30{
+    padding: 30px;
+}
+
+.pad-top10{
+    padding-top: 10px;
+}
+
+.pad-bottom10{
+    padding-bottom: 10px;
+}
+
+.pad5{
+    padding: 5px;
+}
+
+.display-block{
+    display: block;
+}
+
+.gap10{
+    margin:10px;
+}
+
+.gap20{
+    margin:20px;
+}
+
+.gap-top20{
+    margin-top: 20px; 
+}
+
+.gap-top10{
+    margin-top: 10px;
+}
+
+.gap-bottom10{
+    margin-bottom: 10px;
+}
+
+.point{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+} 
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.no-item{
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+}

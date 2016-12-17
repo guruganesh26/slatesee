@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="static/js/lib/jquery.min.js"></script> -->
+  <script type="text/javascript" src="static/js/login.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body class="bkgrnd">
+  <div class="row" id="login-container">
+    <form action="/api/login" method="post">
+      {% csrf_token %}
+      <div class="row pad-bottom10 gap-top20">
+        <input type="text" name="username" placeholder="Username"  class="col s12 input-box" />
+      </div>
+      <div class="pad-bottom10">
+        <input type="password" name="password" placeholder="password" class="col s12 input-box" />
+      </div>
+      <center class="pad10">
+         <input class="lbutton" type="submit" value="Submit" id="login-button"/>
+      </center>
+      <center class="pad10">
+         <input class="lbutton" type="button" id="register-button" value="Register" onclick="showRegisterForm()" />
+      </center>
+    </form> 
+  </div>
+  {% include "register.html"%}
+</body>  
+</html>

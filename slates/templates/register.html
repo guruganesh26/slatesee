@@ -1,0 +1,26 @@
+<div id="register-container" style="display:none">
+  <form action="/signup" method="post">
+    {% csrf_token %}
+    <div class="pad-bottom10 gap-top20">
+      <input type="text" name="school_name" placeholder="School Name"  class="input-box" />
+    </div>
+    <div class="pad-bottom10 gap-top20">
+      <input type="text" name="principal" placeholder="Principal Name"  class="input-box" />
+    </div>
+    <div class="pad-bottom10 gap-top20">
+      <input type="text" name="emailid" placeholder="Email Id"  class="input-box" />
+    </div>
+    <div class="pad-bottom10 gap-top20">
+      <input type="number" name="no_of_students" placeholder="No of Students"  class="input-box" />
+    </div>
+    <div class="pad-bottom10 gap-top20">
+      <input type="number" name="no_of_teachers" placeholder="No of Teachers"  class="input-box" />
+    </div>
+    <center class="pad10">
+       <input type="submit" value="Submit" id="register-button" class="lbutton"/>
+    </center>
+    <center class="pad10">
+         <input class="lbutton" type="button" value="Cancel" onclick="showLoginForm()" />
+    </center>
+  </form> 
+</div>

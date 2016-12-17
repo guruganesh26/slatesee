@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% block head%}
+	<script type="text/javascript" src="static/js/lib/slickQuiz-config.js"></script>
+	<script type="text/javascript" src="static/js/lib/slickQuiz.js"></script>
+	<script type="text/javascript" src="static/js/mcq.js"></script>
+	<!-- <link href="static/css/lib/reset.css" media="screen" rel="stylesheet" type="text/css"> -->
+	<link href="static/css/lib/master.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="static/css/lib/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block  main %}
+	<div class="notification-container"></div>
+      {%if request.user.user_type == "teacher" or request.user.user_type == "principal" %}
+		<select id="appr-type" class="gap10 right" onchange="_PAGE=1;getMcqSets(this.value);">
+		    <option value="0">Not Approved</option>
+		    <option value="1">Approved</option>
+		</select>
+		<script type="text/javascript">getMcqSets($('#appr-type').val())</script>
+	  {%else%}
+	    <script type="text/javascript">getMcqSets(1)</script>		
+	  {%endif%}
+	<div id="mcq-container" class="mcq-container"></div>
+	<div id="mcq-view-container" class="mcq-view-container">
+	   {% include "mcq_view.html" %}
+	</div>   
+	<div class="clear"></div>
+{% endblock %}

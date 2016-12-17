@@ -1,0 +1,9 @@
+{%if request.user.user_type == "teacher" or request.user.user_type == "principal" %}
+	<select id="appr-type" class="right" onchange="_PAGE=1;getMessages(this.value);">
+	    <option value="0">Not Approved</option>
+	    <option value="1">Approved</option>
+	</select>
+{%endif%}
+<div class="message-container">
+     <div class="clear"></div>
+</div>

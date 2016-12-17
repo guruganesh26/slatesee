@@ -1,0 +1,24 @@
+{% extends "home.html" %}
+
+{% block head%}
+   <script type="text/javascript" src="static/js/profile.js"></script>
+{% endblock %}
+
+{% block  main %}
+  <div class="notification-container">
+    <div class="gap10">
+       <span>Theme</span>
+       <select id="theme" onchange="setTheme()">
+          <option>skyblue</option>
+          <option>pink</option>
+          <option>yellow</option>
+          <option>brown</option>
+          <option>green</option>
+          <option>red</option>
+          <option>violet</option>
+          <option>black</option>
+       </select>
+    </div>
+    </div>
+  </div>
+{% endblock %}
