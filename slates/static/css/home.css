@@ -32,7 +32,7 @@
     position: relative;
     z-index: 1;
 }
-.header-content {
+/*.header-content {
     width: 100%;
     margin: auto;
     position: relative;
@@ -40,8 +40,8 @@
 .header-content-inner {
     width: 100%;
     float: left;
-    /*padding: 0 1em;*/
-}
+    padding: 0 1em;
+}*/
 .site-logo {
     float: left;
     padding: 0.3em 0;
@@ -110,7 +110,7 @@ ul.menu-ul li.icon {display: none !important;}
   ul.menu-ul.responsive li a {
     display: block;
     text-align: left;
-    padding: 5px 0;
+    padding: 5px 0 !important;
   }
 }
 
