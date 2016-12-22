@@ -27,6 +27,9 @@
          <input class="lbutton" type="button" id="register-button" value="Register" onclick="showRegisterForm()" />
       </center>
     </form> 
+    {%if request.session.msg%}
+      <div>{{request.session.msg}}</div>
+    {%endif%}
   </div>
   {% include "register.html"%}
 </body>  

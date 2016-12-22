@@ -1,3 +1,5 @@
+from django.shortcuts import redirect
+
 from slates.models import School, User
 
 from slates.serializer import SchoolSerializer
@@ -32,7 +34,9 @@ class SchoolList(APIView):
         serializer = SchoolSerializer(data=rdata)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            request.session['msg'] = "Signup completed, proceed to login with password abc"
+            return redirect('/')
+            #return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk, format=None):
