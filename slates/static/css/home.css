@@ -54,18 +54,10 @@
   margin-right: 10px;
 }
 
-#cssmenu ul > li{
-  list-style: none;
-  display: inline-block;
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-}
-
-#cssmenu > ul > li > a {
+#cssmenu > ul.menu-ul > li > a {
   font-size: 12px;
   font-weight: bold;
-  padding: 21px 0;
+  padding: 20px 0;
   margin-left: 20px;
   color: whitesmoke;
   text-transform: uppercase;
@@ -77,12 +69,49 @@
   transition: color 0.25s ease-out;
 }
 
-#cssmenu > ul > li:hover > a {
+#cssmenu > ul.menu-ul > li:hover > a {
     color: #333;
 }
 
-#cssmenu > ul > li.active > a {
+#cssmenu > ul.menu-ul > li.active > a {
     color: #333;
+}
+
+#cssmenu >ul.menu-ul > li{
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+ul.menu-ul li.icon {display: none !important;}
+
+@media screen and (max-width:680px) {
+  ul.menu-ul li:not(:first-child) {display: none !important;}
+  ul.menu-ul li.icon {
+    float: right;
+    display: inline-block !important;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.menu-ul.responsive {position: relative;}
+  ul.menu-ul.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menu-ul.responsive li {
+    float: none;
+    display: inline !important;
+  }
+  ul.menu-ul.responsive li a {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+  }
 }
 
 .message-box{

@@ -20,6 +20,8 @@ class SchoolList(APIView):
         if not request.user:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         principal = request.data['emailid']
+        if not principal:
+            return Response({"principal":"This field required"}, status=status.HTTP_400_BAD_REQUEST)
         name = request.data['principal']
         user = User.objects.create(user_name=principal, password='abc', first_name=name,
          user_type='principal')

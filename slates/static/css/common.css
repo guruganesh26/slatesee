@@ -17,8 +17,8 @@ html{
 
 .bkgrnd {
   /* Set rules to fill background */
+  /*min-width: 1024px;*/
   min-height: 100% !important;
-  min-width: 1024px;
     
   /* Set up proportionate scaling */
   width: 100%;
@@ -27,13 +27,6 @@ html{
   position: fixed;
   top: 0;
   left: 0;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  .bkgrnd {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
 }
 
 .input-box{

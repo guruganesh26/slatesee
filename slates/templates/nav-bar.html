@@ -1,16 +1,27 @@
 <div class="header-section">
+  <script type="text/javascript">
+    function navResp() {
+      var x =document.getElementById("retopnav");
+      if (x.className === "menu-ul") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu-ul";
+      }
+    }
+  </script>
   <div class="header-content">
     <div class="header-content-inner">
       <div class="nav-bar">
         <!-- <div class="site-logo"><img src="/static/images/logo.png" alt="logo"></div> -->
         <div class="navigation right">
           <div id="cssmenu">
-            <ul class="menu-ul">
+            <ul class="menu-ul" id="retopnav">
               {% if request.user.user_type == "admin" %}
                 <li><a href='/home'><span>Add</span></a></li>
                 <li id="manage"><a href='/manage'><span>Manage</span></a></li>
                 <li id="view"><a href='/view'><span>View</span></a></li>
                 <li><a href="/api/logout"><span>Logout</span></a></li>
+                <li class="icon"><a href="javascript:void(0);"onclick="navResp()">&#9776;</a>
               {%endif%}
               {%if request.user.user_type == "principal"%}
                 <li id="home"><a href='/home'><span>Approve</span></a></li>
@@ -19,6 +30,7 @@
                 <li id="manage"><a href='/manage'><span>Manage</span></a></li>
                 <li id="view"><a href='/view'><span>View</span></a></li>
                 <li><a href="/api/logout"><span>Logout</span></a></li>
+                <li class="icon"><a href="javascript:void(0);"onclick="navResp()">&#9776;</a>
               {%endif%}
               {%if request.user.user_type == "student"%}
                 <li id="home"><a href='/home'><span>Home</span></a></li>
@@ -29,6 +41,7 @@
                 <li id="marks"><a href='/marks'><span>Marks</span></a></li>
                 <li id="profile"><a href='/profile'><span>Profile</span></a></li>
                 <li><a href="/api/logout"><span>Logout</span></a></li>
+                <li class="icon"><a href="javascript:void(0);"onclick="navResp()">&#9776;</a>
               {%endif%}
               {%if request.user.user_type == "teacher"%}
                 <li id="home"><a href='/home'><span>Home</span></a></li>
@@ -36,6 +49,7 @@
                 <li id="view"><a href='/view'><span>View</span></a></li>
                 <li id="attendence"><a href='/attendence'><span>Attendence</span></a></li>
                 <li><a href="/api/logout"><span>Logout</span></a></li>
+                <li class="icon"><a href="javascript:void(0);"onclick="navResp()">&#9776;</a>
               {%endif%}   
             </ul>
           </div>
