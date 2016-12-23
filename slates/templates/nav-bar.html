@@ -11,6 +11,11 @@
   </script>
   <div class="header-content">
     <div class="header-content-inner">
+      {%if request.user.user_type == "teacher"%}
+        <a class="side-icon" href="javascript:void(0);" onclick="showTeacherSideNav()">&#9776;</a>
+      {%else%}
+        <a class="side-icon" href="javascript:void(0);" onclick="showSideNav()">&#9776;</a>
+      {%endif%}
       <div class="nav-bar">
         <!-- <div class="site-logo"><img src="/static/images/logo.png" alt="logo"></div> -->
         <div class="navigation right">

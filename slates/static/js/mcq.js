@@ -5,18 +5,19 @@ var _PAGE_SIZE=6;
 function fillMcqSets(elem, mcqs){
     elem.empty();
     for (var m=0;m<mcqs.length-1;m++){
-        var html = '<div class="mcq-box"><span class="mcq-icon"></span><span class="mcq">'+
+        var html = '<div class="mcq-box point"><span class="mcq-icon">'+
+                    '</span><span class="mcq" onclick="viewMcq('+mcqs[m].id+')">'+
                     mcqs[m].set_name;
 /*        if(mcqs[mcqs.length-1].user_type=="principal" && mcqs[m].is_approved==false){
             html += '<input type="button" value="Approve" class="sbutton approve hide"'+ 
                     'onclick="approveMessage('+mcqs[m].id+')">';
         }*/
-        html += '<input type="button" value="View" class="sbutton approve hide"'+ 
-        'onclick="viewMcq('+mcqs[m].id+')">';
+/*        html += '<input type="button" value="View" class="sbutton approve hide"'+ 
+        'onclick="viewMcq('+mcqs[m].id+')">';*/
         html += '</span></div>';
         elem.append(html);
         
-        $('.mcq').css("position", "relative");
+        // $('.mcq').css("position", "relative");
     }
 
     if(mcqs.length==0){

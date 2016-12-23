@@ -43,6 +43,10 @@
               <div class="pad5">Std: {{request.user.standard}}</div>
             {% endif %}  
           </div>
+          <div class="teacher-menu hide pad20">
+            <div onclick="showTeacherSideNav()">Send Message/Upload Event Image</div>
+            <div onclick="showAddItem()">Add Marks/Flashcard/MCQ</div>
+          </div>
         </div>
       {%if request.user.user_type == "student" or request.user.user_type == "principal" %}
           {% include "messages.html" %}

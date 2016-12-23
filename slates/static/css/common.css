@@ -103,6 +103,10 @@ html{
 
 .hide{
     display: none;
+}
+
+.show{
+    display: block !important;
 } 
 
 .right{

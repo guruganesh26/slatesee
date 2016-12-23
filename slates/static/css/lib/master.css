@@ -112,6 +112,7 @@ ol.questions li {
 ul.answers {
     margin-left: 20px;
     margin-bottom: 20px;
+    padding: 0px;
 }
 
 ul.responses li {

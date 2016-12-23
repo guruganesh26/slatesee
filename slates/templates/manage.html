@@ -12,6 +12,24 @@
      <div class="pad10">Next month our sports day</div>
      <div class="pad10">Students are advised to take drawing books tomorrow</div>
    </marquee>
+    {% if request.user.user_type == "teacher" %}
+      <div class="add-user-menu hide">
+       <div onclick="showTeacherSideNav()">Add Student</div>
+       <div onclick="showAddItem()">Student List</div>
+      </div>
+    {%endif%}
+    {% if request.user.user_type == "principal" %}
+      <div class="add-user-menu hide">
+       <div onclick="showTeacherSideNav()">Add Teacher</div>
+       <div onclick="showAddItem()">Teacher List</div>
+      </div>
+    {%endif%}
+    {% if request.user.user_type == "admin" %}
+      <div class="add-user-menu hide">
+       <div onclick="showTeacherSideNav()">Add School</div>
+       <div onclick="showAddItem()">School List</div>
+      </div>
+    {%endif%}
  </div>
  <div class="send-message-container">
     <div class="send-message-box">
@@ -27,7 +45,7 @@
        <div class="point gap10">Add Schools</div>
      {%endif%}
     </div>
-   <div class="send-message-box">
+   <div class="user-list">
      {% if request.user.user_type == "principal" %}
        <script type="text/javascript">getUserList('teacher');</script>
        <div class="point gap10">Teacher List</div>

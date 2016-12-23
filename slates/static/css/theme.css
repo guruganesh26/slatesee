@@ -1,13 +1,13 @@
 .skyblue .header-section, .skyblue .message-box, .skyblue .send-message-box, 
 .skyblue .flashcard-box, .skyblue .mcq-view-box, .skyblue .mcq-box,
-.skyblue .mcq-view-container .button,
+.skyblue .mcq-view-container .button, .skyblue .user-list, .skyblue #add-item,
 .skyblue .notification-container, .skyblue .slide-container, .skyblue .sbutton{
   background-color: rgba(55, 167, 202, 0.83);
 }
 
 .pink .header-section, .pink .message-box, .pink .send-message-box,
 .pink .flashcard-box, .pink .mcq-view-box, .pink .mcq-box,
-.pink .mcq-view-container .button,
+.pink .mcq-view-container .button, .pink .user-list, .pink #add-item,
 .pink .notification-container, .pink .slide-container, .pink .sbutton{
   background-color: rgba(160, 38, 83, 0.76);
 }
@@ -15,35 +15,35 @@
 
 .yellow .header-section, .yellow .message-box, .yellow .send-message-box, 
 .yellow .flashcard-box, .yellow .mcq-view-box, .yellow .mcq-box,
-.yellow .mcq-view-container .button,
+.yellow .mcq-view-container .button, .yellow .user-list, .yellow #add-item,
 .yellow .notification-container, .yellow .slide-container, .yellow .sbutton{
   background-color:rgba(226, 214, 73, 0.83);
 }
 
 .brown .header-section, .brown .message-box, .brown .send-message-box,
 .brown .flashcard-box, .brown .mcq-view-box, .brown .mcq-box,
-.brown .mcq-view-container .button,
+.brown .mcq-view-container .button, .brown .user-list, .brown #add-item,
 .brown .notification-container, .brown .slide-container, .yellow .sbutton{
   background-color:rgba(226, 129, 73, 0.83);
 }
 
 .red .header-section, .red .message-box, .red .send-message-box, 
 .red .flashcard-box, .red .mcq-view-box, .red .mcq-box,
-.red .mcq-view-container .button,
+.red .mcq-view-container .button, .red .user-list, .red #add-item,
 .red .notification-container, .red .slide-container, .red .sbutton{
   background-color:rgba(191, 14, 6, 0.82);
 }
 
 .violet .header-section, .violet .message-box, .violet .send-message-box, 
 .violet .flashcard-box, .violet .mcq-view-box, .violet .mcq-box,
-.violet .mcq-view-container .button,
+.violet .mcq-view-container .button, .violet .user-list, .violet #add-item,
 .violet .notification-container, .violet .slide-container, .violet .sbutton{
   background-color:rgba(123, 114, 193, 0.76);
 }
 
 .green .header-section, .green .message-box, .green .send-message-box, 
 .green .flashcard-box, .green .mcq-view-box, .green .mcq-box,
-.green .mcq-view-container .button,
+.green .mcq-view-container .button, .green .user-list, .green #add-item,
 .green .notification-container, .green .slide-container, .green .sbutton{
   background-color:rgba(37, 167, 131, 0.76);
 }

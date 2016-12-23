@@ -36,7 +36,8 @@ function displayMarks(data){
 		}]
 		},
 		options: {
-			scales: {yAxes: [{ticks: {beginAtZero:true}}]}
+			scales: {yAxes: [{ticks: {beginAtZero:true}}]},
+			responsive: true
 		}
 	});
 }

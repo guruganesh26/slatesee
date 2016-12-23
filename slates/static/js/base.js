@@ -57,6 +57,30 @@ $(document).ready(function(){
 });
 
 
+function showSideNav(){
+    $('.notification-container').toggleClass('show');
+    $('.slide-container').toggleClass('hide');
+    $('.event-container').toggleClass('show');
+    $('.flashcard-container').toggleClass('hide');
+}
+
+function showTeacherSideNav(){
+    $('.notification-container').toggleClass('show');
+    $('.teacher-menu').toggleClass('hide');
+    $('.add-user-menu').toggleClass('hide');
+    $('.user-list').toggleClass('hide');
+}
+
+function showAddItem(){
+    $('.notification-container').toggleClass('show');
+    $('.send-message-box').hide();
+    $('#add-item').show();
+    $('.user-list').show();
+    $('.teacher-menu').toggleClass('hide');
+    $('.add-user-menu').toggleClass('hide');
+}
+
+
 $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 
 $.ajaxSetup({ 
