@@ -68,7 +68,9 @@ function showTeacherSideNav(){
     $('.notification-container').toggleClass('show');
     $('.teacher-menu').toggleClass('hide');
     $('.add-user-menu').toggleClass('hide');
-    $('.user-list').toggleClass('hide');
+    $('.user-list').hide();
+    $('#add-item').hide();
+    $('.send-message-box').show();
 }
 
 function showAddItem(){

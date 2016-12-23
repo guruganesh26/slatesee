@@ -198,10 +198,6 @@ ul.menu-ul li.icon {display: none !important;}
 
 }
 
-#add-item{
-    display: block;
-}
-
 @media screen and (max-width:680px) {
   .send-message-box{
     width: 100%;
