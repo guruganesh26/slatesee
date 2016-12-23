@@ -18,12 +18,40 @@ class SchoolList(APIView):
         serializer = SchoolSerializer(school, many=True)
         return Response(serializer.data)
 
+    def get_school_object(self, school_name):
+        try:
+            return School.objects.get(school_name=school_name)
+        except School.DoesNotExist:
+            return False
+            
+    def get_user_object(self, email):
+        try:
+            return User.objects.get(user_name=email)
+        except User.DoesNotExist:
+            return False
+
     def post(self, request, format=None):
         if not request.user:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        school_exist  = self.get_school_object(request.data['school_name'])
+
+        if school_exist:
+            request.session['msg'] = "School name already exist"
+            request.session['signup'] = True
+            return redirect('/')
+
         principal = request.data['emailid']
+        principal_exist = self.get_user_object(principal)
+        if principal_exist:
+            request.session['msg'] = "Principal already exist"
+            request.session['signup'] = True
+            return redirect('/')
+        
         if not principal:
-            return Response({"principal":"This field required"}, status=status.HTTP_400_BAD_REQUEST)
+            request.session['msg'] = "Principal field is required"
+            request.session['signup'] = True
+            return redirect('/')
+
         name = request.data['principal']
         user = User.objects.create(user_name=principal, password='abc', first_name=name,
          user_type='principal')

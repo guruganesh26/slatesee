@@ -22,5 +22,9 @@
     <center class="pad10">
          <input class="lbutton" type="button" value="Cancel" onclick="showLoginForm()" />
     </center>
-  </form> 
+  </form>
+  {%if request.session.signup%}
+    <div class="error" style="color:red">{{request.session.msg}}</div>
+    <script type="text/javascript">showRegisterForm()</script>
+  {%endif%}
 </div>

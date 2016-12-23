@@ -32,11 +32,22 @@ class UserList(APIView):
     def update_used_space(self, file_size):
         school = self.school
         school.disk_space_used += file_size
-        school.save()        
+        school.save() 
+
+    def get_user_object(self, username):
+        try:
+            return User.objects.get(user_name=username)
+        except User.DoesNotExist:
+            return False          
 
     def post(self, request, format=None):
         if not request.user:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        user_exist = self.get_user_object(user_name)
+        if user_exist:
+            return Response({"user_name": "Already Exist"}, status=status.HTTP_400_BAD_REQUEST)
+
         if 'created_by' not in request.data:
             request.data['created_by'] = request.user.id
         if request.data['profile_image']:

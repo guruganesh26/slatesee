@@ -27,8 +27,8 @@
          <input class="lbutton" type="button" id="register-button" value="Register" onclick="showRegisterForm()" />
       </center>
     </form> 
-    {%if request.session.msg%}
-      <div>{{request.session.msg}}</div>
+    {%if request.session.msg and not request.session.signup%}
+      <div class="error" style="color:red">{{request.session.msg}}</div>
     {%endif%}
   </div>
   {% include "register.html"%}
