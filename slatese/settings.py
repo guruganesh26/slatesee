@@ -78,22 +78,24 @@ WSGI_APPLICATION = 'slatese.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': '104.199.204.152',
-#         'NAME': 'slatese',
+#         'HOST': '130.211.241.122',
+#         'NAME': 'slatesee',
 #         'USER': 'root',
-#         'PASSWORD': 'slatese',
+#         'PASSWORD': 'slatesee',
 #     }
 # }
+
+# DEBUG = True
 
 if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
     # Running on production App Engine, so use a Google Cloud SQL database.
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/eduslates:asia-east1:slatese',
-            'NAME': 'slatese',
+            'HOST': '/cloudsql/slatesee-156612:asia-east1:slatesee',
+            'NAME': 'slatesee',
             'USER': 'root',
-            'PASSWORD': 'slatese',
+            'PASSWORD': 'slatesee',
         }
     }
     # SECURITY WARNING: don't run with debug turned on in production!
@@ -102,7 +104,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'slatese',
+            'NAME': 'slatesee',
             'USER': 'devusr1',
             'PASSWORD': 'Acsl_123',
             'HOST': 'localhost',
@@ -160,7 +162,7 @@ LOGIN_URL = "/"
 EVENTS_GALLERY_PATH = "/event-images"
 PROFILE_IMAGE_PATH = "/profile-images"
 
-GOOGLE_CLOUD_STORAGE = 'https://storage.googleapis.com/eduslates.appspot.com'
+GOOGLE_CLOUD_STORAGE = 'https://storage.googleapis.com/slatesee-156612.appspot.com'
 
 
 if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):

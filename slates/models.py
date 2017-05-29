@@ -99,8 +99,8 @@ class School(models.Model):
 	no_of_teachers = models.IntegerField()
 	created_by = models.ForeignKey(User, null=True, related_name="s_created_by")
 	updated_by = models.ForeignKey(User, null=True, related_name="s_updated_by")
-	disk_space = models.DecimalField(decimal_places=5, max_digits=40)
-	disk_space_used = models.DecimalField(default=0.0, decimal_places=5, max_digits=40)
+	disk_space = models.DecimalField(decimal_places=5, max_digits=50)
+	disk_space_used = models.DecimalField(default=0.0, decimal_places=5, max_digits=50)
 
 class FlashCard(models.Model):
 	side_a = models.TextField()
