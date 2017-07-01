@@ -162,7 +162,7 @@ LOGIN_URL = "/"
 EVENTS_GALLERY_PATH = "/event-images"
 PROFILE_IMAGE_PATH = "/profile-images"
 
-GOOGLE_CLOUD_STORAGE = 'https://storage.googleapis.com/slatesee-156612.appspot.com'
+GOOGLE_CLOUD_STORAGE = 'https://storage.googleapis.com/slatesee1.appspot.com'
 
 
 if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):

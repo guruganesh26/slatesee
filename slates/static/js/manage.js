@@ -4,7 +4,7 @@ function displayUserList(users){
     users.forEach(function(i){
          html+='<div class="user-details"><div class="user-profile left">';
          if(i["profile_image"]!=""){
-            if(window.location.host == "eduslates.appspot.com"){
+            if(window.location.host == "slatesee1.appspot.com"){
               var url = "https://storage.googleapis.com"
               html+='<img src="'+url+i["profile_image"]+'"></img></div>';
             }else{
@@ -113,7 +113,7 @@ function displayStudentList(users){
     users.forEach(function(i){
          html+='<div class="student-details"><div class="student-profile left">';
          if(i["profile_image"]!=""){
-            if(window.location.host == "eduslates.appspot.com"){
+            if(window.location.host == "slatesee1.com"){
               var url = "https://storage.googleapis.com"
               html+='<img src="'+url+i["profile_image"]+'"></img></div>';
             }else{
