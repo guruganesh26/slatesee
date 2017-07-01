@@ -44,7 +44,7 @@ class UserList(APIView):
         if not request.user:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        user_exist = self.get_user_object(user_name)
+        user_exist = self.get_user_object(request.data['user_name'])
         if user_exist:
             return Response({"user_name": "Already Exist"}, status=status.HTTP_400_BAD_REQUEST)
 
