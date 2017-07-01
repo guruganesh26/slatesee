@@ -92,10 +92,10 @@ if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '/cloudsql/slatesee-156612:asia-east1:slatesee',
+            'HOST': '/cloudsql/slatesee1:asia-northeast1:slatesee',
             'NAME': 'slatesee',
             'USER': 'root',
-            'PASSWORD': 'slatesee',
+            'PASSWORD': 'slyokiNGI61zj72p'#'slatesee',
         }
     }
     # SECURITY WARNING: don't run with debug turned on in production!
@@ -105,10 +105,10 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'slatesee',
-            'USER': 'devusr1',
-            'PASSWORD': 'Acsl_123',
-            'HOST': 'localhost',
-            'PORT': '3306',
+            'USER': 'root',#'devusr1',
+            'PASSWORD': 'slyokiNGI61zj72p',#'Acsl_123',
+            'HOST': '35.187.216.236',#'localhost',
+            #'PORT': '3306',
         }
     }
     # SECURITY WARNING: don't run with debug turned on in production!
