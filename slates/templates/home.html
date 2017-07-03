@@ -43,7 +43,7 @@
         <div class="notification-container">
           <div class="profile pad20">
             {% if request.user.profile_image %}
-              <image src="{{request.user.profile_image}}"></image>
+              <image src="https://storage.googleapis.com/{{request.user.profile_image}}"></image>
             {%else%}
               <image src="/static/images/index1.png"></image>
             {%endif%} 
